@@ -557,20 +557,21 @@
                 height: 100%;
                 background-color: var(--color-element-thirdy);
                 transform: scaleX(0) scaleY(102%);
-                transition: transform 0.6s ease;
+                transition: transform 0.6s ease-in;
+                transform-origin: 0 50%;
 
                 @include viewport-phone {
                     width: calc(100% + 2 * var(--wrap-1));
                     margin-left: calc(-1 * var(--wrap-1));
                 }
 
-                @at-root .info-list li:nth-child(odd) .info-list__item::after {
-                    transform-origin: 0 50%;
-                }
+                // @at-root .info-list li:nth-child(odd) .info-list__item::after {
+                //     transform-origin: 0 50%;
+                // }
 
-                @at-root .info-list li:nth-child(even) .info-list__item::after {
-                    transform-origin: 100% 50%;
-                }
+                // @at-root .info-list li:nth-child(even) .info-list__item::after {
+                //     transform-origin: 100% 50%;
+                // }
 
                 @at-root .info-list__item:hover::after {
                     transform: scaleX(1) scaleY(103%);
